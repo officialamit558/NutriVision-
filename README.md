@@ -65,8 +65,8 @@ Each block consists of:
 |------------------|--------------|
 | Accuracy         | ~Top-1 accuracy on Food101 (based on training run) |
 | Loss             | Cross-Entropy |
-| Optimizer        | AdamW |
-| Learning Rate    | 3e-4 |
+| Optimizer        | Adam |
+| Learning Rate    | 1e-3 |
 
 ---
 
