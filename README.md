@@ -54,7 +54,7 @@ Each block consists of:
 
 ## 🖼️ ViT Architecture Diagram
 
-![ViT Architecture](./assets/vit_architecture.png)  
+![ViT Architecture]([./assets/vit_architecture.png](https://github.com/officialamit558/NutriVision/blob/main/ViT.png))  
 *Source: ViT Paper (Dosovitskiy et al., 2020)*
 
 ---
