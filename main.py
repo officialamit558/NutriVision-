@@ -9,7 +9,7 @@ from ViT import ViT
 from dataset import train_dataloader , test_dataloader
 from TransferLearning import create_ViT_model
 
-from NeuroPipe.NeuroLoom import (
+from NeuroLoom import (
     train,
     save_model,
     plot_loss_curves,
