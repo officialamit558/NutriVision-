@@ -33,7 +33,7 @@ To train the Vision Transformer model efficiently, the following hardware and so
 | GPU Utilization   | 100%                             |
 | Operating System  | Windows with WDDM Driver Model   |
 
-![GPU Usage](./assets/gpu_usage.png)
+![GPU Usage](https://github.com/officialamit558/NutriVision/blob/main/GPU_Used.png)
 
 *Note: The model was trained using a single RTX 4060 GPU. The high utilization (100%) indicates efficient usage of hardware resources during training.*
 
