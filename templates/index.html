@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriVision - Food Image Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-utensils"></i> NutriVision</h1>
+            <p>Upload a food image and get nutrition information instantly</p>
+        </header>
+
+        <main>
+            <div class="upload-container">
+                <div class="upload-area" id="drop-area">
+                    <form id="upload-form" enctype="multipart/form-data">
+                        <input type="file" id="file-input" name="file" accept="image/*" capture="environment" hidden />
+                        <label for="file-input" id="file-label">
+                            <div class="upload-prompt">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Drag & drop your food image here or click to browse</p>
+                                <span>Supports JPG, JPEG, PNG (Size <= 16 mb)</span>
+                            </div>
+                            <div class="preview-container" id="preview-container" hidden>
+                                <img id="preview-image" src="#" alt="Preview">
+                                <button type="button" id="remove-image"><i class="fas fa-times"></i></button>
+                            </div>
+                        </label>
+                        
+                        <div class="input-options">
+                            <button type="button" id="camera-button" class="option-button"><i class="fas fa-camera"></i> Take Photo</button>
+                            <button type="button" id="upload-button" disabled>Analyze Food <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Camera modal -->
+            <div id="camera-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Take a Photo</h3>
+                        <button id="close-camera"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <video id="camera-view" autoplay playsinline></video>
+                        <canvas id="camera-canvas" hidden></canvas>
+                        <div class="camera-controls">
+                            <button id="take-photo"><i class="fas fa-camera"></i> Capture</button>
+                            <button id="switch-camera"><i class="fas fa-sync-alt"></i> Switch Camera</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="results-container" class="results-container" hidden>
+                <div class="results-header">
+                    <h2>Analysis Results</h2>
+                    <button id="new-upload-button"><i class="fas fa-redo"></i> New Analysis</button>
+                </div>
+
+                <div class="results-content">
+                    <div class="result-image">
+                        <img id="result-image" src="#" alt="Analyzed Food">
+                    </div>
+                    <div class="result-info">
+                        <div class="food-info">
+                            <h3 id="food-name">Loading...</h3>
+                            <div class="confidence-bar">
+                                <div class="confidence-level" id="confidence-level"></div>
+                                <div class="confidence-text">Confidence: <span id="confidence-value">0</span>%</div>
+                            </div>
+                        </div>
+                        
+                        <div class="nutrition-info">
+                            <h3>Nutrition Facts</h3>
+                            <div id="weight-selector" class="weight-selector">
+                                <label for="serving-size">Serving Size: </label>
+                                <select id="serving-size">
+                                    <option value="0">Select size</option>
+                                </select>
+                            </div>
+                            <div class="nutrition-table">
+                                <table>
+                                    <tr>
+                                        <th>Serving Size</th>
+                                        <td id="weight">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Calories</th>
+                                        <td id="calories">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Protein</th>
+                                        <td id="protein">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Carbohydrates</th>
+                                        <td id="carbohydrates">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Fats</th>
+                                        <td id="fats">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Fiber</th>
+                                        <td id="fiber">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Sugars</th>
+                                        <td id="sugars">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Sodium</th>
+                                        <td id="sodium">-</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="loader" class="loader" hidden>
+                <!-- <div class="spinner"></div> -->
+                <p>Analyzed your food image...</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 NutriVision | Food Image Analysis with Vision Transformer</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 
