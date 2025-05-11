@@ -17,6 +17,41 @@ NutriVision is a deep learning project that uses Vision Transformers (ViT) to cl
   - Applied standard image augmentation techniques (resize, normalize, etc.).
 
 ---
+## 🔧 Hardware & Training Setup
+
+To train the Vision Transformer model efficiently, the following hardware and software setup was used:
+
+### 🖥️ GPU Specifications
+
+| Parameter         | Value                            |
+|------------------|----------------------------------|
+| GPU Model         | NVIDIA GeForce RTX 4060          |
+| CUDA Version      | 12.6                             |
+| Driver Version    | 561.09                           |
+| VRAM Usage        | 7244 MiB / 8188 MiB              |
+| Power Draw        | 77W / 80W                        |
+| GPU Utilization   | 100%                             |
+| Operating System  | Windows with WDDM Driver Model   |
+
+![GPU Usage](./assets/gpu_usage.png)
+
+*Note: The model was trained using a single RTX 4060 GPU. The high utilization (100%) indicates efficient usage of hardware resources during training.*
+
+---
+
+### ⏱️ Training Time & Efficiency
+
+| Parameter             | Value            |
+|----------------------|------------------|
+| Total Training Epochs | 10               |
+| Batch Size            | 32               |
+| Training Time (approx)| ~40 minutes      |
+| Framework Used        | PyTorch          |
+
+The training process was optimized using mixed precision training and efficient data loading with PyTorch `DataLoader`.
+
+---
+
 
 ## 🧠 Model Architecture
 
