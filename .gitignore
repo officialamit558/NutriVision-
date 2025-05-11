@@ -13,4 +13,3 @@ __pycache__/
 *.env.*
 *.pkl
 *.pt
-models/food101_vit_model.pth
