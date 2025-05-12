@@ -102,7 +102,7 @@ Each block consists of:
 
 | Metric           | Value        |
 |------------------|--------------|
-| Accuracy         | ~Top-1 accuracy on Food101 (based on training run) |
+| Accuracy         | ~51 % |
 | Loss             | Cross-Entropy |
 | Optimizer        | Adam |
 | Learning Rate    | 1e-3 |
