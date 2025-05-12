@@ -9,3 +9,4 @@ Pillow
 requests
 Flask
 Werkzeug
+streamlit
