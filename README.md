@@ -1,7 +1,7 @@
 # 🥗 NutriVision: Food Classification & Nutrition Estimation using Vision Transformer (ViT)
 
 NutriVision is a deep learning project that uses Vision Transformers (ViT) to classify food images and predict their nutritional content. By leveraging the power of Transformer-based architectures, the model achieves high accuracy on food image datasets and helps estimate nutritional values from images.
-
+### Deployed App :- https://nutrivision558.streamlit.app/
 ---
 ### Web Interface
 ![Input Image](https://github.com/officialamit558/NutriVision/blob/main/Screenshot%202025-05-12%20103357.png)
