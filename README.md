@@ -5,7 +5,7 @@ NutriVision is a deep learning project that uses Vision Transformers (ViT) to cl
 ---
 ### Web Interface
 ![Input Image](https://github.com/officialamit558/NutriVision/blob/main/Screenshot%202025-05-12%20103357.png)
-![Analysis Results](https://github.com/officialamit558/NutriVision/blob/main/Screenshot%202025-05-12%20103432.png)
+![Analysis Results](https://github.com/officialamit558/NutriVision/blob/main/Screenshot%202025-05-12%20104852.png)
 ![Not Food Item Detected](https://github.com/officialamit558/NutriVision/blob/main/Screenshot%202025-05-12%20103523.png)
 
 ## 📁 Dataset
