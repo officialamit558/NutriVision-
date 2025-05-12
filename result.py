@@ -78,7 +78,7 @@ elif input_type == "Use Camera":
         filename = "camera_capture.jpg"
 
 if image:
-    st.image(image, caption="Input Image", use_column_width=True)
+    st.image(image, caption="Input Image", use_container_width=True)
 
     pred_class_idx, confidence = classify_image(image)
     pred_class = class_labels[pred_class_idx]
