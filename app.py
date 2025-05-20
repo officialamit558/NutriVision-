@@ -8,6 +8,8 @@ from werkzeug.utils import secure_filename
 from dataset import vit_101_transform
 from ViT import ViT
 from TransferLearning import create_ViT_model
+import io
+import requests
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
@@ -49,22 +51,29 @@ def is_food_item(class_name, confidence):
         
     return True
 
-# Function to load the model
+# Function to load the model directly from Hugging Face without saving locally
 def load_model():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    
-    # Create the model instance
+
+    # Create the model architecture
     vit_model, _ = create_ViT_model(classes=len(class_labels), seed=42)
-    
-    # Load the trained model weights/state_dict
-    model_path = 'models/food101_vit_model.pth'
-    state_dict = torch.load(model_path, map_location=device)
+
+    # Model URL (raw file)
+    remote_model_url = 'https://huggingface.co/spaces/officialamit558/vitmodel/resolve/main/food101_vit_model.pth'
+
+    print("Downloading model from Hugging Face...")
+    response = requests.get(remote_model_url)
+    response.raise_for_status()  # Ensure it downloaded correctly
+
+    # Load model weights from in-memory buffer
+    buffer = io.BytesIO(response.content)
+    state_dict = torch.load(buffer, map_location=device)
     vit_model.load_state_dict(state_dict)
-    
-    # Set model to evaluation mode and ensure it's on the correct device
+
+    # Prepare for inference
     vit_model.eval()
     vit_model = vit_model.to(device)
-    
+
     return vit_model, device
 
 # Load the model and device
