@@ -49,7 +49,7 @@ To train the Vision Transformer model efficiently, the following hardware and so
 |----------------------|------------------|
 | Total Training Epochs | 10               |
 | Batch Size            | 32               |
-| Training Time (approx)| ~4 Hours      |
+| Training Time (approx)| ~6 Hours      |
 | Framework Used        | PyTorch          |
 
 The training process was optimized using mixed precision training and efficient data loading with PyTorch `DataLoader`.
