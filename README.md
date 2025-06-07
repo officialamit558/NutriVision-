@@ -1,4 +1,4 @@
-# 🥗 NutriVision: Food Classification & Nutrition Estimation using Vision Transformer (ViT)
+# NutriVision: Food Classification & Nutrition Estimation using Vision Transformer (ViT)
 
 NutriVision is a deep learning project that uses Vision Transformers (ViT) to classify food images and predict their nutritional content. By leveraging the power of Transformer-based architectures, the model achieves high accuracy on food image datasets and helps estimate nutritional values from images.
 ### Deployed App :- https://nutrivision558.streamlit.app/
@@ -25,7 +25,7 @@ NutriVision is a deep learning project that uses Vision Transformers (ViT) to cl
 
 To train the Vision Transformer model efficiently, the following hardware and software setup was used:
 
-### 🖥️ GPU Specifications
+### GPU Specifications
 
 | Parameter         | Value                            |
 |------------------|----------------------------------|
@@ -43,7 +43,7 @@ To train the Vision Transformer model efficiently, the following hardware and so
 
 ---
 
-### ⏱️ Training Time & Efficiency
+###  Training Time & Efficiency
 
 | Parameter             | Value            |
 |----------------------|------------------|
@@ -57,18 +57,18 @@ The training process was optimized using mixed precision training and efficient 
 ---
 
 
-## 🧠 Model Architecture
+##  Model Architecture
 
 This project implements the **Vision Transformer (ViT)** architecture from scratch using PyTorch.
 
-### 🔍 Paper Reference
+###  Paper Reference
 
 > **"An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"**  
 > [Dosovitskiy et al., 2020](https://arxiv.org/abs/2010.11929)
 
 ---
 
-### ⚙️ Key Components of ViT
+### Key Components of ViT
 
 #### 1. **Image Patch Embedding**
 - Each input image is divided into **fixed-size patches** (e.g., 16x16).
@@ -91,14 +91,14 @@ Each block consists of:
 
 ---
 
-## 🖼️ ViT Architecture Diagram
+##  ViT Architecture Diagram
 
 ![ViT Architecture](https://github.com/officialamit558/NutriVision/blob/main/ViT.png)
 *Source: ViT Paper (Dosovitskiy et al., 2020)*
 
 ---
 
-## 🧪 Performance & Results
+##  Performance & Results
 
 | Metric           | Value        |
 |------------------|--------------|
@@ -109,16 +109,16 @@ Each block consists of:
 
 ---
 
-## ✅ Features
+## Features
 
-- 📦 End-to-end ViT implementation in PyTorch  
-- 🍱 Food classification into 101 categories  
-- 🔢 Nutrient prediction (optional extension)  
-- 🧪 Custom training & evaluation loops  
+-  End-to-end ViT implementation in PyTorch  
+-  Food classification into 101 categories  
+-  Nutrient prediction (optional extension)  
+-  Custom training & evaluation loops  
 
 ---
 
-## 📌 Future Work
+##  Future Work
 
 - Extend the model to estimate **macronutrients** (carbs, fats, proteins) using metadata or additional models.
 - Experiment with **larger ViT variants** (ViT-L, ViT-H) and pretrained weights.
@@ -126,7 +126,7 @@ Each block consists of:
 
 ---
 
-## 📜 Citation
+##  Citation
 
 If you use this work or are inspired by it, please cite the original ViT paper:
 
